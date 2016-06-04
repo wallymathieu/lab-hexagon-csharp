@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87990190-157B-41D8-9AB7-1B757B5AC4A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TicketApp.Api</RootNamespace>
+    <AssemblyName>TicketApp.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Events\UpdateEvent.cs" />
+    <Compile Include="Events\CommandEvent.cs" />
+    <Compile Include="Events\OutputEvent.cs" />
+    <Compile Include="Events\QueryEvent.cs" />
+    <Compile Include="Events\ResponseCode.cs" />
+    <Compile Include="Events\ResponseEvent.cs" />
+    <Compile Include="Objects\TicketDetails.cs" />
+    <Compile Include="Objects\TicketFullView.cs" />
+    <Compile Include="ITicketService.cs" />
+    <Compile Include="Events\Ticket\CreateTicketEvent.cs" />
+    <Compile Include="Events\Ticket\DeleteTicketEvent.cs" />
+    <Compile Include="Events\Ticket\ReadTicketsEvent.cs" />
+    <Compile Include="Events\Ticket\TicketCreatedEvent.cs" />
+    <Compile Include="Events\Ticket\TicketDeletedEvent.cs" />
+    <Compile Include="Events\Ticket\TicketsReadEvent.cs" />
+    <Compile Include="Events\Ticket\TicketUpdatedEvent.cs" />
+    <Compile Include="Events\Ticket\UpdateTicketEvent.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Events\" />
+    <Folder Include="Events\Ticket\" />
+    <Folder Include="Objects\" />
+  </ItemGroup>
+</Project>
