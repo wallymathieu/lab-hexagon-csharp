@@ -3,7 +3,7 @@
 namespace TicketApp.Api
 {
     public class ResponseEvent<EVT, OBJ> : OutputEvent
-        where  EVT: OutputEvent 
+        where  EVT: ResponseEvent<EVT, OBJ>
     {
         public OBJ Object {
             get;
@@ -13,13 +13,13 @@ namespace TicketApp.Api
         public ResponseEvent() {
         }
 
-        public EVT ok() {
-            code = ResponseCode.OK;
+        public EVT Ok() {
+            Code = ResponseCode.OK;
             return (EVT) this;
         }
 
-        public EVT notFound() {
-            code = ResponseCode.OBJECT_NOT_FOUND;
+        public EVT NotFound() {
+            Code = ResponseCode.OBJECT_NOT_FOUND;
             return (EVT) this;
         }
     }

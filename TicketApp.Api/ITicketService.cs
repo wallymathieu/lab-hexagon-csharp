@@ -4,13 +4,13 @@ namespace TicketApp.Api
 {
     public interface ITicketService {
 
-        TicketsReadEvent list(ReadTicketsEvent @event);
+        TicketsReadEvent List(ReadTicketsEvent @event);
 
-        TicketCreatedEvent create(CreateTicketEvent ticket);
+        TicketCreatedEvent Create(CreateTicketEvent ticket);
 
-        TicketUpdatedEvent update(UpdateTicketEvent ticket);
+        TicketUpdatedEvent Update(UpdateTicketEvent ticket);
 
-        TicketDeletedEvent delete(DeleteTicketEvent ticket);
+        TicketDeletedEvent Delete(DeleteTicketEvent ticket);
     }
 }
 

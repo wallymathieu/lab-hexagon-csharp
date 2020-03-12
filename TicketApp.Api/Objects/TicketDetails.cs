@@ -4,10 +4,10 @@ namespace TicketApp.Api
 {
     public class TicketDetails
     {
-        public int code{get;set;}
-        public DateTime creation{get;set;}
-        public String account{get;set;}
-        public int priority{get;set;}
+        public int Code{get;set;}
+        public DateTime Creation{get;set;}
+        public String Account{get;set;}
+        public int Priority{get;set;}
     }
 }
 

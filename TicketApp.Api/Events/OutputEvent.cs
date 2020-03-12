@@ -4,11 +4,11 @@ namespace TicketApp.Api
 {
     public class OutputEvent
     {
-        public ResponseCode code { get; set; }
+        public ResponseCode Code { get; set; }
 
 
         public OutputEvent() {
-            code =  ResponseCode.OK;
+            Code =  ResponseCode.OK;
         }
     }
 }
