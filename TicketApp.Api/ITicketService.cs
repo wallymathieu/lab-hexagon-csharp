@@ -2,8 +2,8 @@
 
 namespace TicketApp.Api
 {
-    public interface ITicketService {
-
+    public interface ITicketService
+    {
         TicketsReadEvent List(ReadTicketsEvent @event);
 
         TicketCreatedEvent Create(CreateTicketEvent ticket);

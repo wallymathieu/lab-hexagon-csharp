@@ -4,8 +4,8 @@
     <AssemblyTitle>TicketApp.Api</AssemblyTitle>
     <Copyright>mathieu</Copyright>
     <Deterministic>false</Deterministic>
-    <AssemblyVersion>1.0.*</AssemblyVersion>
-    <FileVersion>1.0.*</FileVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
 </Project>

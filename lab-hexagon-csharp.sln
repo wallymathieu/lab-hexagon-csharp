@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketApp.Application.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketApp.Api", "TicketApp.Api\TicketApp.Api.csproj", "{87990190-157B-41D8-9AB7-1B757B5AC4A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketApp.RestAdapter", "TicketApp.RestAdapter\TicketApp.RestAdapter.csproj", "{B3306319-4E5B-4BCF-B9D1-08BBB61BE4DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketApp.Adapter", "TicketApp.Adapter\TicketApp.Adapter.csproj", "{B3306319-4E5B-4BCF-B9D1-08BBB61BE4DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketApp.RestApdapter.Tests", "TicketApp.RestApdapter.Tests\TicketApp.RestApdapter.Tests.csproj", "{15DE5EEF-46E8-4099-B20A-A1E50D2238FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketApp.Adapter.Tests", "TicketApp.Adapter.Tests\TicketApp.Adapter.Tests.csproj", "{15DE5EEF-46E8-4099-B20A-A1E50D2238FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

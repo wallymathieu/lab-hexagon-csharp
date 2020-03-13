@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyTitle>TicketApp.Adapter.Tests</AssemblyTitle>
+    <Copyright>mathieu</Copyright>
+    <Deterministic>false</Deterministic>
+    <ConsolePause>false</ConsolePause>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="3.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="test-data\*.json" />
+    <EmbeddedResource Include="test-data\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TicketApp.Application\TicketApp.Application.csproj" />
+    <ProjectReference Include="..\TicketApp.Api\TicketApp.Api.csproj" />
+    <ProjectReference Include="..\TicketApp.Adapter\TicketApp.Adapter.csproj" />
+  </ItemGroup>
+
+
+</Project>
