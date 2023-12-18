@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TicketApp.Api
+namespace TicketApp.Api.Objects
 {
     public class TicketDetails
     {

@@ -1,12 +1,7 @@
-﻿using System;
-
-namespace TicketApp.Api
+﻿namespace TicketApp.Api.Events
 {
     public class CommandEvent
     {
-        public CommandEvent ()
-        {
-        }
     }
 }
 

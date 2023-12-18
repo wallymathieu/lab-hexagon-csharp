@@ -1,21 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using TicketApp.Api;
+using TicketApp.Api.Events.Ticket;
+using TicketApp.Api.Objects;
 using TicketApp.Application.Domain;
 using TicketApp.Application.Repositories;
 
-namespace TicketApp.Adapter
+namespace TicketApp.Adapter.Controllers
 {
     [ApiController, Route("/api/v1/tickets")]
-    public class TicketsController : ControllerBase
+    public class TicketsController(ITicketService ticketService): ControllerBase
     {
-        private readonly ITicketService ticketService;
-
-        public TicketsController(ITicketService ticketService)
-        {
-            this.ticketService = ticketService;
-        }
         [HttpPost("",Name="Create")]
         public IActionResult Create([FromBody] TicketDetails ticket)
         {

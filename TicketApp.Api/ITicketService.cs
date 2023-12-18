@@ -1,4 +1,4 @@
-﻿using System;
+﻿using TicketApp.Api.Events.Ticket;
 
 namespace TicketApp.Api
 {

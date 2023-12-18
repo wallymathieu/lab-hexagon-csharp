@@ -1,13 +1,10 @@
-﻿using System;
-
-namespace TicketApp.Api
+﻿namespace TicketApp.Api.Events
 {
     public class QueryEvent
     {
-        public int offset{ get; set;}
-        public int limit{ get; set;}
-        public int total{ get; set;}
-
+        public int Offset{ get; set;}
+        public int Limit{ get; set;}
+        public int Total{ get; set;}
     }
 }
 

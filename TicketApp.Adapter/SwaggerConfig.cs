@@ -4,9 +4,8 @@ using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Swagger;
 
-namespace TicketApp.Application.Repositories
+namespace TicketApp.Adapter
 {
     class SwaggerConfig
     {

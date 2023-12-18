@@ -4,6 +4,11 @@ using Xunit;
 using TicketApp.Application.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
+using TicketApp.Adapter;
+using TicketApp.Adapter.Repositories;
+using TicketApp.Api.Events;
+using TicketApp.Api.Events.Ticket;
+using TicketApp.Api.Objects;
 using TicketApp.Application.Handlers;
 
 namespace TicketApp.Application.Tests
@@ -41,7 +46,7 @@ namespace TicketApp.Application.Tests
 
             TicketCreatedEvent evtOutput = ticketService.Create(@event);
 
-            Assert.Equal(ResponseCode.OK, evtOutput.Code);
+            Assert.Equal(ResponseCode.Ok, evtOutput.Code);
 
             TicketDetails output = evtOutput.Object;
 

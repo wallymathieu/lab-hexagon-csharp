@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.TestHost;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.IO;
 using System.Net;
@@ -9,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using TicketApp.Adapter.Tests.test_data;
 using TicketApp.Application.Domain;
-using TicketApp.Application.Repositories;
 using Xunit;
 
 namespace TicketApp.Adapter.Tests
@@ -49,7 +46,7 @@ namespace TicketApp.Adapter.Tests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             var content=await response.Content.ReadAsStringAsync();
-            File.WriteAllText("./swagger.json",content);
+            await File.WriteAllTextAsync("./swagger.json",content);
         }
 
         private async Task<ResponseEntity<Ticket>> CreateTicket(HttpClient httpClient) =>

@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace TicketApp.Api
+﻿namespace TicketApp.Api.Events
 {
-    public class ResponseEvent<EVT, OBJ> : OutputEvent
-        where  EVT: ResponseEvent<EVT, OBJ>
+    public class ResponseEvent<TEvent, TObject> : OutputEvent
+        where  TEvent: ResponseEvent<TEvent, TObject>
     {
-        public OBJ Object {
+        public TObject Object {
             get;
             set;
         }
@@ -13,14 +11,14 @@ namespace TicketApp.Api
         public ResponseEvent() {
         }
 
-        public EVT Ok() {
-            Code = ResponseCode.OK;
-            return (EVT) this;
+        public TEvent Ok() {
+            Code = ResponseCode.Ok;
+            return (TEvent) this;
         }
 
-        public EVT NotFound() {
-            Code = ResponseCode.OBJECT_NOT_FOUND;
-            return (EVT) this;
+        public TEvent NotFound() {
+            Code = ResponseCode.ObjectNotFound;
+            return (TEvent) this;
         }
     }
 }

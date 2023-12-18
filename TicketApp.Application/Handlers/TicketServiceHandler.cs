@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using TicketApp.Api;
+using TicketApp.Api.Events.Ticket;
+using TicketApp.Api.Objects;
 using TicketApp.Application.Domain;
 using TicketApp.Application.Repositories;
 

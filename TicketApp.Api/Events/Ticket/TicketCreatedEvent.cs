@@ -1,6 +1,6 @@
-﻿using System;
+﻿using TicketApp.Api.Objects;
 
-namespace TicketApp.Api
+namespace TicketApp.Api.Events.Ticket
 {
     public class TicketCreatedEvent:ResponseEvent<TicketCreatedEvent, TicketDetails>
     {

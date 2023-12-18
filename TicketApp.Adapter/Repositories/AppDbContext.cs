@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TicketApp.Application.Domain;
 
-namespace TicketApp.Application.Repositories
+namespace TicketApp.Adapter.Repositories
 {
     public class AppDbContext:DbContext
     {

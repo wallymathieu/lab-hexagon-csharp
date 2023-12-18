@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using TicketApp.Api;
+using TicketApp.Api.Objects;
 
 namespace TicketApp.Application.Domain
 {
@@ -19,7 +19,7 @@ namespace TicketApp.Application.Domain
         public Account Account { get; set; }
         /**
          * Translate the domain model to the API
-         * 
+         *
          * @return the transfer object
          */
         public TicketDetails ToTicketDetails()
@@ -41,7 +41,7 @@ namespace TicketApp.Application.Domain
 
         /**
          * Translate the ticket to the domain model
-         * 
+         *
          * @param ticketDetails
          * @return model
          */
@@ -54,10 +54,7 @@ namespace TicketApp.Application.Domain
             return domain;
         }
 
-        public override String ToString()
-        {
-            return "Ticket [code=" + Code + ", creation=" + Creation + ", priority=" + Priority + ", description="
-                    + Description + ", account=" + Account + "]";
-        }
+        public override String ToString() =>
+            $"Ticket [code={Code}, creation={Creation}, priority={Priority}, description={Description}, account={Account}]";
     }
 }

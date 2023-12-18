@@ -1,15 +1,8 @@
-﻿using System;
-
-namespace TicketApp.Api
+﻿namespace TicketApp.Api.Events
 {
     public class OutputEvent
     {
-        public ResponseCode Code { get; set; }
-
-
-        public OutputEvent() {
-            Code =  ResponseCode.OK;
-        }
+        public ResponseCode Code { get; set; } = ResponseCode.Ok;
     }
 }
 

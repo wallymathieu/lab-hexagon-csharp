@@ -1,17 +1,13 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
+using TicketApp.Application.Repositories;
 
-namespace TicketApp.Application.Repositories
+namespace TicketApp.Adapter.Repositories
 {
-    internal abstract class Repository<T,TKey>: IRepository<T, TKey> where T:class
+    internal abstract class Repository<T, TKey>(AppDbContext appDbContext) : IRepository<T, TKey>
+        where T : class
     {
 
-        protected readonly AppDbContext appDbContext;
-
-        public Repository(AppDbContext appDbContext)
-        {
-            this.appDbContext = appDbContext;
-        }
+        protected readonly AppDbContext AppDbContext = appDbContext;
 
         public virtual void Delete(TKey code)
         {

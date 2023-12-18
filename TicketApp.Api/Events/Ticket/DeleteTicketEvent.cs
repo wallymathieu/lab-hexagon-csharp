@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TicketApp.Api
+﻿namespace TicketApp.Api.Events.Ticket
 {
     public class DeleteTicketEvent:CommandEvent
     {

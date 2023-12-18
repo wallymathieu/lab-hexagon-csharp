@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace TicketApp.Api
+﻿namespace TicketApp.Api.Events
 {
-    public class UpdateEvent<OBJ, EVT> : CommandEvent
+    public class UpdateEvent<TObject, TEvent> : CommandEvent
     {
-        public OBJ Object {
+        public TObject Object {
             get;
             set;
         }

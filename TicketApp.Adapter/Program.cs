@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace TicketApp.Application.Repositories
+namespace TicketApp.Adapter
 {
 
     public class Program

@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace TicketApp.Api
+﻿namespace TicketApp.Api.Events
 {
     public enum ResponseCode
     {
-        OK, OBJECT_NOT_FOUND, ERROR
+        Ok, ObjectNotFound, Error
     }
 }
 

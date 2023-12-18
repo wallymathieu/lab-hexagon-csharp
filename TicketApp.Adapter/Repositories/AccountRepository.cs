@@ -1,11 +1,8 @@
 ﻿using TicketApp.Application.Domain;
+using TicketApp.Application.Repositories;
 
-namespace TicketApp.Application.Repositories
+namespace TicketApp.Adapter.Repositories
 {
-    internal class AccountRepository : Repository<Account, string>, IAccountRepository
-    {
-        public AccountRepository(AppDbContext appDbContext) : base(appDbContext)
-        {
-        }
-    }
+    internal class AccountRepository(AppDbContext appDbContext)
+        : Repository<Account, string>(appDbContext), IAccountRepository;
 }
