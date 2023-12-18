@@ -9,7 +9,6 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
     <ProjectReference Include="..\TicketApp.Api\TicketApp.Api.csproj" />
   </ItemGroup>
 </Project>
