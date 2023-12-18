@@ -6,12 +6,9 @@ using TicketApp.Application.Repositories;
 
 namespace TicketApp.Adapter.Repositories
 {
-    internal class TicketRepository : Repository<Ticket, int>, ITicketRepository
+    internal class TicketRepository(AppDbContext appDbContext)
+        : Repository<Ticket, int>(appDbContext), ITicketRepository
     {
-        public TicketRepository(AppDbContext appDbContext) : base(appDbContext)
-        {
-        }
-
         public List<Ticket> FindByCreationIsAfter(DateTime creation)
         {
             return

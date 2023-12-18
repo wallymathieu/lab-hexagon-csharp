@@ -14,7 +14,7 @@ namespace TicketApp.Adapter
 {
     public class Startup
     {
-        private SwaggerConfig _swagger = new SwaggerConfig();
+        private readonly SwaggerConfig _swagger = new SwaggerConfig();
 
         public IConfiguration Configuration { get; }
 
